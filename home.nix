@@ -43,7 +43,7 @@ let
 
     git = {
       enable = true;
-      ignores = [ "*.swp" ];
+      ignores = [ "*.swp" ".DS_Store" ];
       userName = myinfo.gituser;
       userEmail = myinfo.email;
       lfs = {
