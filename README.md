@@ -11,7 +11,7 @@ Please read more on the [nix website](https://nixos.org/download/).
 sh <(curl -L https://nixos.org/nix/install)
 ```
 
-## 3. CLone this repo
+## 3. Clone this repo
 Clone this repo to 
 ```sh
 ~/.config/nix-darwin
