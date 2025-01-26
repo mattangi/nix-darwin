@@ -11,11 +11,12 @@ Please read more on the [nix website](https://nixos.org/download/).
 sh <(curl -L https://nixos.org/nix/install)
 ```
 
-## 3. Clone this repo
+## 3. Clone this repo and update user inco
 Clone this repo to 
 ```sh
 ~/.config/nix-darwin
 ```
+Update the user info in flake.nix and home.nix.
 
 ## 4. Install nix-darwin
 ```sh
