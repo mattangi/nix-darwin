@@ -49,6 +49,7 @@ let
       lfs = {
         enable = true;
       };
+      signing.key = "6ECDE3E8177091AF";
       extraConfig = {
         init.defaultBranch = "main";
         core = {
