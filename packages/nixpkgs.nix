@@ -47,4 +47,5 @@ with pkgs; [
     arc-browser
     alt-tab-macos
     zoom-us
+    aerospace
 ]

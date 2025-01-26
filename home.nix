@@ -77,6 +77,7 @@ let
 
   home.file = {
     "/Users/${myinfo.user}/.config/nvim".source = ./config/nvim;
+    "/Users/${myinfo.user}/.config/aerospace".source = ./config/aerospace;
   };
 
 }
