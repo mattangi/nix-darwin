@@ -75,7 +75,7 @@
 
     system.defaults = {
       dock = {
-        autohide = false;
+        autohide = true;
         mineffect = "genie";
         show-recents = false;
         launchanim = true;
