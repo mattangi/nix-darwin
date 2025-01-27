@@ -48,4 +48,5 @@ with pkgs; [
     alt-tab-macos
     zoom-us
     aerospace
+    raycast
 ]
