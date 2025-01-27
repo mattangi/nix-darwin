@@ -9,5 +9,4 @@ _:
     "chatgpt"
     "balenaetcher"
     "ghostty"
-    "alfred"
 ]
