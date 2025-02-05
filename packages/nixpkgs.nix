@@ -36,6 +36,7 @@ with pkgs; [
     # GPG and yubikey
     gnupg
     pinentry_mac
+    bitwarden-cli
 
     # fonts
     vimPlugins.mini-icons
