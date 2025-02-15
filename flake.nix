@@ -70,8 +70,8 @@
 
     users.users.${myinfo.user}.home = "/Users/${myinfo.user}";
     home-manager.backupFileExtension = "backup";
-    nix.configureBuildUsers = true;
-    nix.useDaemon = true;
+    #nix.configureBuildUsers = true;
+    #nix.useDaemon = true;
 
     system.defaults = {
       dock = {
