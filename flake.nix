@@ -71,7 +71,7 @@
     users.users.${myinfo.user}.home = "/Users/${myinfo.user}";
     home-manager.backupFileExtension = "backup";
     #nix.configureBuildUsers = true;
-    #nix.useDaemon = true;
+    nix.useDaemon = true;
 
     system.defaults = {
       dock = {
@@ -99,7 +99,7 @@
       magicmouse.MouseButtonMode = "TwoButton";
     };
 
-    services.nix-daemon.enable = true;
+    #services.nix-daemon.enable = true;
     #services.karabiner-elements.enable = true;
     #services.karabiner-elements.package = pkgs.karabiner-elements;
 
