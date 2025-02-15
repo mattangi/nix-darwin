@@ -22,7 +22,7 @@
           {
             path = "/Users/${myinfo.user}/Documents";
             section = "others";
-            options = "--sort name --view grid --display stack";
+            options = "--sort name --view grid --display folder";
           }
         ];
       };
