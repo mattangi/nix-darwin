@@ -7,6 +7,6 @@ _:
     "karabiner-elements"
     "vlc"
     "chatgpt"
-    "balenaetcher"
+#    "balenaetcher"
     "ghostty"
 ]
