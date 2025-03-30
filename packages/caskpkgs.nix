@@ -10,4 +10,6 @@ _:
 #    "balenaetcher"
     "ghostty"
     "minecraft"
+    "private-internet-access"
+    "transmission"
 ]

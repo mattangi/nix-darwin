@@ -32,7 +32,8 @@ with pkgs; [
     vim
     neofetch
     lazygit
-
+    rename
+    
     # GPG and yubikey
     gnupg
     pinentry_mac
