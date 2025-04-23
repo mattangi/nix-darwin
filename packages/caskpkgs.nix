@@ -12,4 +12,5 @@ _:
     "minecraft"
     "private-internet-access"
     "transmission"
+    "wifiman"
 ]
