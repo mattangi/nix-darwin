@@ -47,7 +47,7 @@ with pkgs; [
     vscode
     arc-browser
     alt-tab-macos
-    zoom-us
+    #zoom-us
     aerospace
     raycast
 ]

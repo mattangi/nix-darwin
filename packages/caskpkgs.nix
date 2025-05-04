@@ -13,4 +13,5 @@ _:
     "private-internet-access"
     "transmission"
     "wifiman"
+    "zoom"
 ]
