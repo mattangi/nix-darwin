@@ -29,7 +29,8 @@ let
     gpg-agent = {
       enable = true;
       enableSshSupport = true;
-      pinentryPackage = pkgs.pinentry_mac;
+      #pinentryPackage = pkgs.pinentry_mac;
+      pinentry.package = pkgs.pinentry_mac;
     };
   };
 
