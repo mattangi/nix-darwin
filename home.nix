@@ -11,6 +11,7 @@ let
   # paths it should manage.
   home.username = "${myinfo.user}";
   home.homeDirectory = "/Users/${myinfo.user}";
+  home.enableNixpkgsReleaseCheck = false;
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
@@ -20,7 +21,8 @@ let
   # You can update Home Manager without changing this value. See
   # the Home Manager release notes for a list of state version
   # changes in each release.
-  home.stateVersion = "24.11";
+  #home.stateVersion = "24.11";
+  home.stateVersion = "25.05";
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

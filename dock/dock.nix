@@ -25,5 +25,6 @@
             options = "--sort name --view grid --display folder";
           }
         ];
+        username = myinfo.user;
       };
 }

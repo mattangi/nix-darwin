@@ -50,6 +50,8 @@
 	    #pkgs.meslo-lgs-nf
     ];
 
+    system.primaryUser = myinfo.user;
+    
     system.activationScripts.applications.text = let
       env = pkgs.buildEnv {
         name = "system-applications";
