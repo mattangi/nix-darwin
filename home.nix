@@ -1,16 +1,12 @@
 { config, pkgs, inputs, lib, ... }:
 let 
-  myinfo = {
-      user = "mattangi";
-      name = "Kevin Yoon";
-      gituser = "mattangi";
-      email = "mattangi@gmail.com";
-  }; in
+  globals = import ./globals.nix;
+in
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "${myinfo.user}";
-  home.homeDirectory = "/Users/${myinfo.user}";
+  home.username = "${globals.myinfo.user}";
+  home.homeDirectory = "/Users/${globals.myinfo.user}";
   home.enableNixpkgsReleaseCheck = false;
 
   # This value determines the Home Manager release that your
@@ -47,8 +43,8 @@ let
     git = {
       enable = true;
       ignores = [ "*.swp" ".DS_Store" ];
-      userName = myinfo.gituser;
-      userEmail = myinfo.email;
+      userName = globals.myinfo.gituser;
+      userEmail = globals.myinfo.email;
       lfs = {
         enable = true;
       };
@@ -79,9 +75,9 @@ let
   };
 
   home.file = {
-    "/Users/${myinfo.user}/.config/nvim".source = ./config/nvim;
-    "/Users/${myinfo.user}/.config/aerospace".source = ./config/aerospace;
-    "/Users/${myinfo.user}/.config/ghostty".source = ./config/ghostty;
+    "/Users/${globals.myinfo.user}/.config/nvim".source = ./config/nvim;
+    "/Users/${globals.myinfo.user}/.config/aerospace".source = ./config/aerospace;
+    "/Users/${globals.myinfo.user}/.config/ghostty".source = ./config/ghostty;
   };
 
 }

@@ -16,18 +16,15 @@
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, home-manager }:
   let
-  myinfo = {
-    user = "mattangi";
-    name = "Kevin Yoon";
-    email = "mattangi@gmail.com";
-  };
+  globals = import ./globals.nix;
+
   arch = "aarch64-darwin"; # x86_64-darwin
   configuration = { pkgs, config, ... }: {
     imports = [
       ./dock
     ];
 
-    local = {} // import ./dock/dock.nix {inherit config pkgs myinfo; };
+    local = {} // import ./dock/dock.nix {inherit config pkgs globals; };
 
     nixpkgs.config.allowUnfree = true;
 
@@ -50,7 +47,7 @@
 	    #pkgs.meslo-lgs-nf
     ];
 
-    system.primaryUser = myinfo.user;
+    system.primaryUser = globals.myinfo.user;
     
     system.activationScripts.applications.text = let
       env = pkgs.buildEnv {
@@ -72,7 +69,7 @@
         done
       '';
 
-    users.users.${myinfo.user}.home = "/Users/${myinfo.user}";
+    users.users.${globals.myinfo.user}.home = "/Users/${globals.myinfo.user}";
     home-manager.backupFileExtension = "backup";
     #nix.configureBuildUsers = true;
     #nix.useDaemon = true;
@@ -138,7 +135,7 @@
         home-manager.darwinModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.${myinfo.user} = import ./home.nix;
+          home-manager.users.${globals.myinfo.user} = import ./home.nix;
         }
 #        nixvim.nixDarwinModules.nixvim
 	      nix-homebrew.darwinModules.nix-homebrew
@@ -151,7 +148,7 @@
             enableRosetta = true;
 
             # User owning the Homebrew prefix
-            user = "${myinfo.user}";
+            user = "${globals.myinfo.user}";
 
             # if already installed homebrew
             # autoMigrate = true;
@@ -160,6 +157,6 @@
       ];
     };
     
-    darwinPackages = self.darwinConfigurations."mbp".pkgs;
+    darwinPackages = self.darwinConfigurations.${globals.myinfo.tag}.pkgs;
   };
 }

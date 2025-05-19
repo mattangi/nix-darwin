@@ -1,4 +1,4 @@
-{ config, pkgs, myinfo, ... }:
+{ config, pkgs, globals, ... }:
 
 {
     dock = {
@@ -15,16 +15,16 @@
             options = "--sort name --view grid --display folder";
           }
           {
-            path = "/Users/${myinfo.user}/Downloads/";
+            path = "/Users/${globals.myinfo.user}/Downloads/";
             section = "others";
             options = "--sort name --view grid --display folder";
           }
           {
-            path = "/Users/${myinfo.user}/Documents";
+            path = "/Users/${globals.myinfo.user}/Documents";
             section = "others";
             options = "--sort name --view grid --display folder";
           }
         ];
-        username = myinfo.user;
+        username = globals.myinfo.user;
       };
 }
