@@ -3,6 +3,7 @@
 This will install the tools to build some packages.
 ```sh
 xcode-select --install
+softwareupdate –install-rosetta
 ```
 
 ## 2. Install nix on MacOS
@@ -26,7 +27,7 @@ nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch 
 ## 5. Using nix-darwin
 After installing, you can run the following command to apply changes to your system:
 ```sh
-darwin-rebuild switch --flake ~/.config/nix-darwin#mbp
+sudo darwin-rebuild switch --flake ~/.config/nix-darwin#mbp
 ```
 
 ## 6. Updating flake
