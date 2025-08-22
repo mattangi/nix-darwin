@@ -45,7 +45,7 @@ with pkgs; [
     # all the other apps
     obsidian
     vscode
-    arc-browser
+    #arc-browser
     alt-tab-macos
     #zoom-us
     aerospace

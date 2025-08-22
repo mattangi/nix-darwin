@@ -14,4 +14,5 @@ _:
     "transmission"
     "wifiman"
     "zoom"
+    "arc"
 ]
