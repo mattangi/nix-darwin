@@ -30,7 +30,9 @@ with pkgs; [
     eza
     tldr
     vim
-    neofetch
+    # neofetch
+    hyfetch
+    fastfetch
     lazygit
     rename
     
